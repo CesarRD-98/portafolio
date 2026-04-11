@@ -14,9 +14,9 @@ export function HomeView({ data }: Props) {
     }
 
     return (
-        <Section id="home" className="flex items-center min-h-[80vh]">
+        <Section id="home" className="flex flex-col">
 
-            <div className="grid gap-12 md:grid-cols-2 items-center">
+            <div className="grid gap-12 md:grid-cols-2">
 
                 {/* LEFT */}
                 <div className="flex flex-col gap-6">
@@ -46,7 +46,6 @@ export function HomeView({ data }: Props) {
 
                     {/* CTA */}
                     <div className="flex flex-wrap gap-4 mt-2">
-
                         {/* PRIMARY */}
                         <Link
                             href={'/projects'}
@@ -67,16 +66,11 @@ export function HomeView({ data }: Props) {
                             Sobre mí
                             <FaUser />
                         </Link>
-
                     </div>
                 </div>
 
                 {/* RIGHT */}
                 <div className="flex justify-center md:justify-end relative">
-
-                    {/* Glow sutil */}
-                    <div className="absolute w-72 h-72 bg-blue-500/10 blur-3xl rounded-full -z-10" />
-                    
                     <div className="relative w-full h-[170px] md:h-[300px] overflow-hidden">
                         <Image
                             src="https://rekydsbimkpqukrlqkbi.supabase.co/storage/v1/object/public/Images/web-developer.webp"
@@ -87,9 +81,7 @@ export function HomeView({ data }: Props) {
                             priority
                         />
                     </div>
-
                 </div>
-
             </div>
         </Section>
     )
