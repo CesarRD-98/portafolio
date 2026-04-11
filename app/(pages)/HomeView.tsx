@@ -14,9 +14,8 @@ export function HomeView({ data }: Props) {
     }
 
     return (
-        <Section id="home" className="flex flex-col">
-
-            <div className="grid gap-12 md:grid-cols-2">
+        <Section id="home" className="mt-0 md:mt-5">
+            <div className="grid gap-12 md:grid-cols-2 items-center">
 
                 {/* LEFT */}
                 <div className="flex flex-col gap-6">
