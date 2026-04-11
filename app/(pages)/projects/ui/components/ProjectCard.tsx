@@ -9,7 +9,7 @@ type Props = {
     projects: Project[]
 }
 
-export default function ProjectCard({ projects }: Props) {
+export function ProjectCard({ projects }: Props) {
     if (!projects.length) {
         return <p className="text-neutral-500 dark:text-neutral-400">Aún no hay proyectos para mostrar</p>
     }

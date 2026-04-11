@@ -1,6 +1,6 @@
-import { Section } from "../components/layout/Section"
 import { FaArrowUp, FaUser, } from "react-icons/fa6"
-import { User } from "../modules/user_public/user.model"
+import { Section } from "@/app/components/layout/Section"
+import { User } from "@/app/modules/user_public/user.model"
 import Image from 'next/image'
 import Link from 'next/link'
 

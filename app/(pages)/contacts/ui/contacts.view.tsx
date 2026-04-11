@@ -2,7 +2,7 @@
 
 import { Section } from "@/app/components/layout/Section"
 import { Contact } from "@/app/modules/user_public/user.model"
-import ContactCard from "./components/ContactCard"
+import { ContactCard } from "./components/ContactCard"
 
 type Props = {
     contacts: Contact[]

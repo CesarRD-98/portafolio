@@ -11,7 +11,7 @@ type Props = {
 type SkillType = 'frontend' | 'backend' | 'tools'; // base de datos
 type SkillFilter = SkillType | 'all' // sirve solo UI
 
-export default function SkillCard({ skills }: Props) {
+export function SkillCard({ skills }: Props) {
     const [filter, setFilter] = useState<SkillFilter>('all')
 
     const filters = useMemo<SkillFilter[]>(() => {

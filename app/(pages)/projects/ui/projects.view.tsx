@@ -1,6 +1,6 @@
 import { Section } from "@/app/components/layout/Section"
 import { Project } from "@/app/modules/user_public/user.model"
-import ProjectCard from "./components/ProjectCard"
+import { ProjectCard } from "./components/ProjectCard"
 
 type Props = {
     data: Project[]

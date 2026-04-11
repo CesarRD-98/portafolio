@@ -1,5 +1,5 @@
 import { UserService } from "@/app/modules/user_public/user.service"
-import { ContactsView } from "./ContacsView"
+import { ContactsView } from "./ui/contacts.view"
 
 export const metadata = {
     title: 'Contacto',

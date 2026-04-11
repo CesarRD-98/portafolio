@@ -1,5 +1,5 @@
 import { UserService } from "../modules/user_public/user.service";
-import { HomeView } from "./HomeView";
+import { HomeView } from "./ui/home.view";
 
 export const metadata = {
     title: 'Inicio',

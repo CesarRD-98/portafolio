@@ -1,5 +1,5 @@
 import { UserService } from "@/app/modules/user_public/user.service"
-import { ProjectsView } from "./ProjectsView"
+import { ProjectsView } from "./ui/projects.view"
 
 export const metadata = {
     title: 'Proyectos',

@@ -1,5 +1,5 @@
 import { UserService } from "@/app/modules/user_public/user.service"
-import { AboutMeView } from "./AboutMeView"
+import { AboutMeView } from "./ui/AboutMeView"
 
 export const metadata = {
     title: 'Sobre mí',

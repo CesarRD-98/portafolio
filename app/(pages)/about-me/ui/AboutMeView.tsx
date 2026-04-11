@@ -1,5 +1,5 @@
 import { User } from "@/app/modules/user_public/user.model"
-import SkillCard from "./components/SkillCard"
+import { SkillCard } from "./components/SkillCard"
 import { Section } from "@/app/components/layout/Section"
 import { Brain, Code2, User as UserIcon } from "lucide-react"
 import { CvView } from "./components/CvView"

@@ -15,7 +15,7 @@ type Props = {
     contacts: Contact[]
 }
 
-export default function ContactCard({ contacts }: Props) {
+export function ContactCard({ contacts }: Props) {
     if (!contacts.length) {
         return <p className="text-neutral-500 dark:text-neutral-400">No hay información de contacto disponible</p>
     }
