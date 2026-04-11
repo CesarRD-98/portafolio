@@ -24,3 +24,45 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/*======
+  LOADER
+======*/
+
+/* TRACK BASE */
+.cr-track {
+  fill: none;
+  stroke: #e5e5e5;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dark .cr-track {
+  stroke: #404040;
+}
+
+/* ANIMACIÓN LIMPIA */
+.cr-animated-path {
+  fill: none;
+  stroke: #2563eb;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.4));
+
+  stroke-dasharray: 236;
+  animation: cr-loop 1.6s linear infinite;
+}
+
+/* LOOP PERFECTO */
+@keyframes cr-loop {
+  0% {
+    stroke-dashoffset: 236;
+  }
+
+  100% {
+    stroke-dashoffset: -236;
+  }
+}
