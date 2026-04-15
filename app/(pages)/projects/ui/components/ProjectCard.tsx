@@ -45,7 +45,7 @@ export function ProjectCard({ projects }: Props) {
                         </h3>
 
                         {/* DESCRIPTION */}
-                        <p className="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-3">
+                        <p className="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-4">
                             {project.description}
                         </p>
 
@@ -67,16 +67,18 @@ export function ProjectCard({ projects }: Props) {
                         </p>
 
                         {/* CTA */}
-                        <div className="mt-2">
-                            <Link
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:underline">
-                                Ver proyecto
-                                <FaArrowUp className="rotate-45" />
-                            </Link>
-                        </div>
+                        {project.link && (
+                            <div className="mt-2">
+                                <Link
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:underline">
+                                    Ver proyecto
+                                    <FaArrowUp className="rotate-45" />
+                                </Link>
+                            </div>
+                        )}
 
                     </div>
 

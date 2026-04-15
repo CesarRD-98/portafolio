@@ -37,7 +37,7 @@ export function Navbar() {
                     <Link href="/" className="flex items-center gap-2">
                         <div className="relative w-12 h-12">
                             <Image
-                                src="https://rekydsbimkpqukrlqkbi.supabase.co/storage/v1/object/public/Images/icon-nav.webp"
+                                src="https://rekydsbimkpqukrlqkbi.supabase.co/storage/v1/object/public/assets/logos/logo-nav.png"
                                 alt="Logo Developer"
                                 fill
                                 sizes='40px'
