@@ -72,7 +72,7 @@ export function HomeView({ data }: Props) {
                 <div className="flex justify-center md:justify-end relative">
                     <div className="relative w-full h-[170px] md:h-[300px] overflow-hidden">
                         <Image
-                            src="https://rekydsbimkpqukrlqkbi.supabase.co/storage/v1/object/public/Images/web-developer.webp"
+                            src="https://rekydsbimkpqukrlqkbi.supabase.co/storage/v1/object/public/assets/banners/web-developer.webp"
                             alt="Ilustración de desarrollador web"
                             fill
                             sizes="140px"
