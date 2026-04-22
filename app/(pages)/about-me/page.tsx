@@ -9,5 +9,8 @@ export const revalidate = 120
 
 export default async function AboutMePage() {
     const data = await UserService.getUserPublic()
-    return <AboutMeView data={data} />
+
+    if (!data) return null
+
+    return <AboutMeView user={data} />
 }

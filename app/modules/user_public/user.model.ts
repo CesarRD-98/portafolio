@@ -22,17 +22,19 @@ export interface Project {
 export interface Skill {
     id: number
     userId: number
-    name: string
-    logo: string
-    type: string
+    title: string
+    logoUrl: string
+    category: string
+    isPrimary: boolean
 }
 
 export interface User {
     author: string
+    tagLine: string
+    profession: string
     shortBio: string
-    fullBio: string
     cvUrl: string
-    learningFocus: string
+    focus: string
     year: number
     contacts: Contact[]
     projects: Project[]

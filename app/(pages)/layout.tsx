@@ -6,7 +6,7 @@ export default function PagesLayout({ children }: { children: ReactNode }) {
     return (
         <>
             <Navbar />
-            <main className="flex-1">
+            <main className="flex-1 dark:bg-neutral-900/60">
                 {children}
             </main>
             <Footer />

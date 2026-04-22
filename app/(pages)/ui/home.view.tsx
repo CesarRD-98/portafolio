@@ -40,7 +40,7 @@ export function HomeView({ data }: Props) {
 
                     {/* DESCRIPTION */}
                     <p className="text-neutral-600 dark:text-neutral-400 max-w-xl">
-                        {data.shortBio}
+                        {data.tagLine}
                     </p>
 
                     {/* CTA */}
