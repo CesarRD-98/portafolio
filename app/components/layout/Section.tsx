@@ -17,7 +17,7 @@ export const Section = ({
     className = ''
 }: SectionProps) => {
     return (
-        <section id={id} className={`py-12 md:py-16 ${className}`}>
+        <section id={id} className={`w-full flex items-center justify-center py-12 md:py-16 ${className}`}>
 
             <Container>
 

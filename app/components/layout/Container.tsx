@@ -8,7 +8,7 @@ type ContainerProps = {
 
 export const Container = ({ children, className = '', as: Tag = 'div' }: ContainerProps) => {
     return (
-        <Tag className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>
+        <Tag className={`w-full max-w-7xl px-6 sm:px-8 lg:px-12 ${className}`}>
             {children}
         </Tag>
     )

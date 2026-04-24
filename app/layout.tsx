@@ -4,10 +4,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Portafolio - César Reyes",
+    default: "Portafolio de César Reyes, desarrollador Fullstack",
     template: "%s | César Reyes"
   },
-  description: "Portafolio de César Reyes, desarrollador web",
+  description: "Conoce más sobre César Reyes, desarrollador fullstack, sus habilidades y tecnologías",
 };
 
 const firaSans = Fira_Sans({

@@ -14,7 +14,7 @@ export function HomeView({ data }: Props) {
     }
 
     return (
-        <Section id="home" className="mt-0 md:mt-5">
+        <Section id="home" className="">
             <div className="grid gap-12 md:grid-cols-2 items-center">
 
                 {/* LEFT */}
