@@ -27,11 +27,11 @@ export function AboutStack({ skills }: Props) {
 
                     <div className="max-w-2xl space-y-3">
                         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-neutral-900 dark:text-white">
-                            Tecnologías que uso para construir productos reales
+                            Mi stack de desarrollo
                         </h2>
 
                         <p className="text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
-                            Un resumen visual de las herramientas que forman mi stack principal, con acceso al listado completo cuando lo necesites.
+                            Un resumen de las tecnologías y herramientas que utilizo para construir aplicaciones
                         </p>
                     </div>
                 </div>
@@ -63,9 +63,7 @@ export function AboutStack({ skills }: Props) {
                         ))}
                     </div>
                 ) : (
-                    <div className="rounded-2xl border border-neutral-200/70 dark:border-neutral-800/70 p-4 md:p-6">
-                        <SkillCard skills={skills} />
-                    </div>
+                    <SkillCard skills={skills} />
                 )}
 
                 <div className="flex justify-center">
