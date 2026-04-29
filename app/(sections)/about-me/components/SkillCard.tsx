@@ -26,7 +26,7 @@ export function SkillCard({ skills }: Props) {
     }, [filter, skills])
 
     return (
-        <div className="p-5 md:p-6 space-y-6">
+        <div className="space-y-6">
 
             {/* FILTERS */}
             <div className="flex flex-wrap justify-center gap-2">
