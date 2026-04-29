@@ -17,14 +17,12 @@ const firaSans = Fira_Sans({
   variable: "--font-fira-sans",
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({ children, }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${firaSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+    <html lang="es" className={`${firaSans.variable}`}>
+      <body>
         {children}
       </body>
     </html>

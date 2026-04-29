@@ -44,5 +44,5 @@ export function useContact() {
         }
     }
 
-    return { status, error, send }
+    return { status, setStatus, error, send }
 }
