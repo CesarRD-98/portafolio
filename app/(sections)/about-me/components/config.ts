@@ -1,5 +1,4 @@
 import {
-    BarChart3,
     CheckCircle2,
     Database,
     FileText,
