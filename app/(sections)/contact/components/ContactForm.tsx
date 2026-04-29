@@ -1,6 +1,7 @@
 'use client'
 
 import { Alert } from '@/app/components/ui/Alert'
+import { Button } from '@/app/components/ui/Button'
 import { Spinner } from '@/app/components/ui/spinner/Spinner'
 import { useContact } from '@/app/modules/user_public/hooks/userPublic.hook'
 import { X } from 'lucide-react'
@@ -110,17 +111,15 @@ export function ContactForm() {
             </div>
 
             {/* BUTTON */}
-            <button
-                type="submit"
+            <Button
+                className='disabled:cursor-not-allowed 
+                disabled:bg-white/70 disabled:dark:bg-neutral-900/70 
+                disabled:border-neutral-300 disabled:dark:border-neutral-700
+                disabled:text-neutral-500 disabled:dark:text-neutral-500'
+                type='submit'
                 disabled={status === 'sending' || status === 'slow' || !isValid}
-                className="flex items-center justify-center rounded-full border border-neutral-300 dark:border-neutral-700 
-                bg-white/70 dark:bg-neutral-900/70 px-5 py-2 text-sm font-medium text-neutral-700 dark:text-neutral-200 
-                transition hover:border-blue-500/40 hover:bg-blue-500/10 hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer 
-                disabled:cursor-not-allowed disabled:border-neutral-300/50 disabled:bg-white/50 disabled:text-neutral-500 
-                dark:disabled:border-neutral-700/50 dark:disabled:bg-neutral-900/50 dark:disabled:text-neutral-500/70"
-            >
-                {(status === 'sending' || status === 'slow') ? <Spinner /> : 'Enviar mensaje'}
-            </button>
+                action={(status === 'sending' || status === 'slow') ? <Spinner /> : 'Enviar mensaje'}
+            />
 
             {/* FEEDBACK */}
             <div className="relative">
@@ -129,13 +128,13 @@ export function ContactForm() {
 
                 {status === 'slow' && (<Alert type="warning" message="El servidor está iniciando, puede tardar unos segundos..." />)}
 
-                {status === 'success' && (<Alert type="success" message="Mensaje enviado exitosamente." />)}
+                {status === 'success' && (<Alert type="success" message="Tu mensaje ha sido enviado con éxito." />)}
 
                 {status === 'error' && (<Alert type="error" message={error ?? 'Ocurrió un error inesperado'} />)}
 
                 {status !== 'idle' && (
-                    <button type='button' className='cursor-pointer' onClick={() => setStatus('idle')}>
-                        <span className="absolute top-3 right-3 text-xs text-neutral-500 hover:text-neutral-500/80">
+                    <button type='button' onClick={() => setStatus('idle')}>
+                        <span className="absolute top-3 right-3 text-xs text-neutral-500 hover:text-neutral-500/80 cursor-pointer">
                             <X size={18} />
                         </span>
                     </button>

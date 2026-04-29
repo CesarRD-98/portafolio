@@ -7,7 +7,7 @@ export async function getUserPublic(): Promise<User | null> {
 
     const [user, projects, skills, contacts] = await Promise.all([
         supabase.from('profiles').select('*').maybeSingle(),
-        supabase.from('projects').select('*').order('id', { ascending: true }),
+        supabase.from('projects').select('*').order('created_at', { ascending: false }),
         supabase.from('skills').select('*'),
         supabase.from('contacts').select('*')
     ])

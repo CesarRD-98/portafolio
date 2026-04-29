@@ -16,9 +16,7 @@ export function AboutHighlights() {
                                 flex h-12 w-12 items-center justify-center
                                 rounded-full
                                 border border-neutral-200 dark:border-neutral-800
-                                bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md
-                                text-neutral-700 dark:text-neutral-300
-                                transition-all duration-200
+                                bg-white/60 dark:bg-neutral-900/60 text-neutral-700 dark:text-neutral-300 transition
                                 group-hover:border-blue-500 group-hover:text-blue-500
                             ">
                                 <Icon size={18} />
@@ -27,8 +25,7 @@ export function AboutHighlights() {
                             {/* TITLE */}
                             <p className="
                                 mt-4 text-sm md:text-base font-medium
-                                text-neutral-700 dark:text-neutral-300
-                                transition-colors duration-200
+                                text-neutral-700 dark:text-neutral-300 transition 
                                 group-hover:text-blue-500
                             ">
                                 {item.title}
@@ -46,8 +43,7 @@ export function AboutHighlights() {
                                 <div className="
                                     mt-6 h-12 w-px
                                     bg-neutral-200 dark:bg-neutral-800
-                                    transition-colors duration-200
-                                    group-hover:bg-blue-500/50
+                                    transition group-hover:bg-blue-500/50
                                 " />
                             )}
 

@@ -57,11 +57,11 @@ export function SkillCard({ skills }: Props) {
                     <div
                         key={skill.id}
                         className="group flex flex-col items-center gap-3 p-5 rounded-2xl border border-neutral-200/70 dark:border-neutral-800/70 
-                        bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md transition-all duration-200 ease-out hover:-translate-y-1 
+                        bg-white/60 dark:bg-neutral-900/60 transition hover:-translate-y-1 
                         hover:border-blue-500/40 hover:shadow-md"
                     >
                         <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-500 
-                        transition-colors duration-200 group-hover:bg-blue-500/15"
+                        transition duration-200 group-hover:bg-blue-500/15"
                         >
                             <Image
                                 width={36}

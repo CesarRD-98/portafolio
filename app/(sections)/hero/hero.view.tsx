@@ -10,7 +10,7 @@ type Props = {
 
 export function HeroView({ user }: Props) {
     return (
-        <Section id="home">
+        <Section id="home" className="scroll-mt-20">
             <div className="grid gap-12 md:grid-cols-2 items-center">
 
                 {/* LEFT */}
@@ -43,7 +43,7 @@ export function HeroView({ user }: Props) {
                         <Link
                             href="#projects"
                             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white font-medium bg-blue-600 hover:bg-blue-600/75 
-                            transition-all duration-200 ease-out"
+                            transition"
                         >
                             Ver proyectos
                             <FaArrowUp className="rotate-45" />
@@ -55,7 +55,7 @@ export function HeroView({ user }: Props) {
                             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium 
                             text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white 
                             bg-neutral-200 dark:bg-neutral-700 hover:bg-neutral-300 dark:hover:bg-neutral-800 
-                            transition-all duration-200 ease-in-out"
+                            transition"
                         >
                             Sobre mí
                             <FaUser />

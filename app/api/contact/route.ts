@@ -1,3 +1,4 @@
+import { isEmail } from "@/app/utils/isEmail";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
@@ -5,6 +6,10 @@ export async function POST(req: NextRequest) {
 
     if (!name?.trim() || !email?.trim() || !message?.trim()) {
         return resp(false, 'Todos los campos son obligatorios', 400)
+    }
+
+    if (!isEmail(email)) {
+        return resp(false, 'Por favor, introduce una dirección de correo electrónico válida.', 400)
     }
 
     const response = await fetch(`${process.env.API_URL!}/contact`, {

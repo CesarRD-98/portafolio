@@ -9,7 +9,7 @@ export function AboutHeader({ user }: Props) {
         <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center gap-6 relative">
 
             {/* BACKGROUND GLOW */}
-            <div className="absolute -top-10 w-72 h-72 bg-blue-500/20 blur-3xl opacity-20 rounded-full pointer-events-none" />
+            <div className="absolute -top-10 w-72 h-72 bg-blue-500/25 blur-3xl opacity-20 rounded-full pointer-events-none" />
 
             {/* PROFESSION BADGE */}
             <span className="px-4 py-1.5 text-xs font-medium tracking-wide rounded-full
@@ -18,9 +18,9 @@ export function AboutHeader({ user }: Props) {
             </span>
 
             {/* NAME */}
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 {user.author}
-            </h1>
+            </h2>
 
             {/* BIO */}
             <p className="max-w-2xl text-base md:text-lg leading-relaxed text-neutral-600 dark:text-neutral-400">
@@ -35,7 +35,7 @@ export function AboutHeader({ user }: Props) {
                 </span>
 
                 <span className="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800">
-                    Disponible para proyectos
+                    Disponible para trabajo remoto
                 </span>
 
             </div>

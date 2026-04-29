@@ -15,20 +15,17 @@ export function AboutMeta() {
                                 group flex flex-col items-start gap-4
                                 p-5 rounded-xl
                                 border border-neutral-200/70 dark:border-neutral-800/70
-                                bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md
-                                transition-all duration-200 ease-out
-                                hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-md
-                            "
+                                bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md transition
+                                hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-md"
                         >
 
                             {/* ICON */}
                             <div className="
                                 flex items-center justify-center
                                 w-11 h-11 rounded-xl
-                                bg-blue-500/10 text-blue-500
-                                transition-colors duration-200
-                                group-hover:bg-blue-500/20
-                            ">
+                                bg-blue-500/10 text-blue-500 transition
+                                group-hover:bg-blue-500/20"
+                            >
                                 <Icon size={18} />
                             </div>
 

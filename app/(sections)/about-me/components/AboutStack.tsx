@@ -5,6 +5,7 @@ import { Layers3 } from "lucide-react"
 import { useState } from "react"
 import { SkillCard } from "./SkillCard"
 import Image from "next/image"
+import { Button } from "@/app/components/ui/Button"
 
 interface Props {
     skills: Skill[]
@@ -42,11 +43,11 @@ export function AboutStack({ skills }: Props) {
                             <div
                                 key={skill.id}
                                 className="group flex flex-col items-center gap-3 rounded-2xl border border-neutral-200/70 dark:border-neutral-800/70 
-                                bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md p-5 text-center transition-all duration-200 ease-out 
+                                bg-white/60 dark:bg-neutral-900/60 p-5 text-center transition 
                                 hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-md"
                             >
-                                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-500 transition-colors 
-                                duration-200 group-hover:bg-blue-500/15">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-500 transition 
+                                group-hover:bg-blue-500/15">
                                     <Image
                                         src={skill.logoUrl}
                                         alt={skill.title}
@@ -67,15 +68,10 @@ export function AboutStack({ skills }: Props) {
                 )}
 
                 <div className="flex justify-center">
-                    <button
-                        type="button"
-                        onClick={() => setIsOpen((value) => !value)}
-                        className="flex items-center justify-center rounded-full border border-neutral-300 dark:border-neutral-700 bg-white/70 dark:bg-neutral-900/70 
-                        px-5 py-2 text-sm font-medium text-neutral-700 dark:text-neutral-200 transition hover:border-blue-500/40 hover:bg-blue-500/10 
-                        hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
-                    >
-                        {isOpen ? "Ver stack principal" : "Ver stack completo"}
-                    </button>
+                    <Button
+                        onClick={() => setIsOpen(prev => !prev)}
+                        action={isOpen ? "Ver stack principal" : "Ver stack completo"}
+                    />
                 </div>
 
             </div>

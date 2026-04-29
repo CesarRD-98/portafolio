@@ -30,7 +30,7 @@ export function Footer({ user }: Props) {
                 {/* BRAND */}
                 <div className="flex flex-col gap-3">
                     <h3 className="text-sm font-semibold tracking-tight text-neutral-900 dark:text-white">
-                        {user.author}
+                        CésarDev
                     </h3>
 
                     <p className="text-sm italic text-neutral-500 dark:text-neutral-400 max-w-xs">
@@ -69,12 +69,12 @@ export function Footer({ user }: Props) {
                                         {href ? (
                                             <Link
                                                 href={href}
-                                                className="text-neutral-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition"
+                                                className="text-neutral-500 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
                                             >
                                                 {contact.value}
                                             </Link>
                                         ) : (
-                                            <span className="text-neutral-900 dark:text-white">
+                                            <span className="text-neutral-500 dark:text-neutral-400">
                                                 {contact.value}
                                             </span>
                                         )}
@@ -105,7 +105,7 @@ export function Footer({ user }: Props) {
                                         <Link
                                             href={contact.linkUrl || '#'}
                                             target="_blank"
-                                            className="text-neutral-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition"
+                                            className="text-neutral-500 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
                                         >
                                             {contact.value}
                                         </Link>
@@ -121,7 +121,7 @@ export function Footer({ user }: Props) {
             {/* BOTTOM */}
             <div className="border-t border-neutral-200 dark:border-neutral-800 py-5 flex justify-center">
                 <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                    &copy; {user.author} {user.year} — Portafolio
+                    &copy; {user.author} {user.year} {" "} &bull; Desarrollador &bull; Portafolio
                 </p>
             </div>
 

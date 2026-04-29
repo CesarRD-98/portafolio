@@ -26,7 +26,7 @@ export interface MetaItem {
 export const highlights: HighlightItem[] = [
     {
         id: 1,
-        title: 'Solucion a problemas',
+        title: 'Solución a problemas',
         description: 'Encuentro soluciones prácticas y eficientes para los desafíos que enfrento',
         icon: Layers
     },

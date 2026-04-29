@@ -1,6 +1,7 @@
 'use client'
 
 import { Alert } from '@/app/components/ui/Alert'
+import { Button } from '@/app/components/ui/Button'
 import { Project } from '@/app/modules/user_public/user.model'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -31,7 +32,7 @@ export function ProjectCard({ projects }: Props) {
                     <div
                         key={project.id}
                         className="group flex flex-col md:grid md:grid-cols-3 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800
-                            bg-white dark:bg-neutral-900 transition-all duration-200 ease-out hover:-translate-y-[3px] hover:shadow-lg"
+                            bg-white dark:bg-neutral-900 transition hover:-translate-y-[3px] hover:shadow-lg"
                     >
 
                         {/* IMAGE */}
@@ -98,14 +99,10 @@ export function ProjectCard({ projects }: Props) {
 
             {projects.length > 2 && (
                 <div className="flex justify-center mt-4">
-                    <button
+                    <Button
                         onClick={handleShowMore}
-                        className="flex items-center justify-center rounded-full border border-neutral-300 dark:border-neutral-700 bg-white/70 
-                        dark:bg-neutral-900/70 px-5 py-2 text-sm font-medium text-neutral-700 dark:text-neutral-200 transition hover:border-blue-500/40 
-                        hover:bg-blue-500/10 hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
-                    >
-                        {showMore ? 'Mostrar menos' : 'Mostrar todos'}
-                    </button>
+                        action={showMore ? 'Mostrar menos' : 'Mostrar todos'}
+                    />
                 </div>
             )}
         </>
