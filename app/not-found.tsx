@@ -36,7 +36,7 @@ export default function NotFound() {
                 <div className="flex justify-center gap-3">
 
                     <Link
-                        href="/"
+                        href="#home"
                         className="flex items-center gap-2 px-4 py-2 rounded-md bg-blue-600/75 text-white hover:bg-blue-700  transition-all duration-200 shadow-sm hover:shadow-md"
                     >
                         <Home size={18} />
