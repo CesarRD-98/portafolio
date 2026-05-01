@@ -24,7 +24,7 @@ export function Alert({ type = 'info', message }: AlertProps) {
 
     return (
         <div className={`py-4 rounded-2xl flex flex-col items-center justify-center gap-2 ${styles[type]}`}>
-            <IconComponent className="mr-2" />
+            <IconComponent />
             <p className="text-center text-sm px-4">{message}</p>
         </div>
     )

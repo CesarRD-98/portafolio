@@ -23,12 +23,12 @@ export function AboutStack({ skills }: Props) {
                     <span className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-1.5 
                     text-xs font-medium tracking-[0.18em] uppercase text-blue-600 dark:text-blue-400">
                         <Layers3 className="h-4 w-4" />
-                        Stack principal
+                        Tecnologías y Herramientas
                     </span>
 
                     <div className="max-w-2xl space-y-3">
                         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-neutral-900 dark:text-white">
-                            Mi stack de desarrollo
+                            {isOpen ? "Todas las tecnologías" : "Tecnologías principales"}
                         </h2>
 
                         <p className="text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
@@ -70,7 +70,7 @@ export function AboutStack({ skills }: Props) {
                 <div className="flex justify-center">
                     <Button
                         onClick={() => setIsOpen(prev => !prev)}
-                        action={isOpen ? "Ver stack principal" : "Ver stack completo"}
+                        action={isOpen ? "Tecnologías principales" : "Todas las tecnologías"}
                     />
                 </div>
 

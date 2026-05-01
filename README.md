@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portafolio Personal - Panel Dinámico
 
-## Getting Started
+Este proyecto representa mi portafolio personal en desarrollo, enfocado en la creación de una plataforma **dinámica, escalable y mantenible**, con la visión de evolucionarlo en el futuro hacia un sistema más completo para la gestión de contenido y posibles servicios profesionales.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Objetivo del Proyecto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El objetivo principal es construir un portafolio que no sea estático, sino un sistema donde pueda:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Gestionar y actualizar mi contenido dinámicamente
+- Mantener una arquitectura escalable para futuras extensiones
+- Prepararlo para evolucionar hacia un sistema de servicios o producto personal
+- Aplicar buenas prácticas de desarrollo moderno
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Stack Tecnológico
 
-To learn more about Next.js, take a look at the following resources:
+### Frontend
+- React
+- Next.js
+- Sass (SCSS)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend / Servicios
+- Supabase (Autenticación + Base de datos + APIs)
+- Manejo de cookies para persistencia de sesión
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Arquitectura y Buenas Prácticas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Este proyecto está construido bajo principios de:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Arquitectura modular
+- Clean Code
+- Separación de responsabilidades
+- Protección de rutas (Auth Guards)
+- Escalabilidad del sistema
+- Separación entre contenido público y panel administrativo
+
+---
+
+## React & Next.js
+
+Se hace uso de funcionalidades modernas de React como:
+
+- useState para manejo de estado local
+- useEffect para efectos secundarios
+- useContext para estado global
+- useCallback y useMemo para optimización
+- Variables globales controladas para estado compartido
+
+En Next.js se implementa:
+
+- Routing protegido
+- Middleware / control de acceso
+- Separación de áreas públicas y dashboard
+
+---
+
+## Autenticación y Backend
+
+- Sistema de login con Supabase
+- Persistencia de sesión mediante cookies
+- Control de acceso a rutas protegidas
+- CRUD completo conectado a base de datos
+- Manejo de errores y validaciones de respuestas
+
+---
+
+## Estado Actual del Proyecto
+
+Actualmente el proyecto se encuentra en fase de:
+
+- Construcción de la lógica base del negocio
+- Integración completa del backend con frontend
+- Implementación de autenticación y CRUD funcional
+- UI/UX aún en desarrollo y fase de mejora
+
+> El enfoque actual está en consolidar la arquitectura y lógica antes de optimizar la interfaz visual.
+
+---
+
+## Futuras Mejoras
+
+- Mejora completa del dashboard administrativo
+- Optimización de UI/UX
+- Expansión del sistema a gestión de servicios
+- Posible monetización del portafolio como plataforma profesional
+- Mejoras en performance y escalabilidad
+
+---
+
+## 📌 Nota Personal
+
+Este proyecto no es solo un portafolio, sino la base de un sistema que puede evolucionar hacia algo más grande: una plataforma profesional para mostrar, gestionar y potencialmente ofrecer servicios.

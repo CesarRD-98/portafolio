@@ -35,7 +35,7 @@ export function AboutHeader({ user }: Props) {
                 </span>
 
                 <span className="px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800">
-                    Disponible para trabajo remoto
+                    Presencial, Remoto o Híbrido
                 </span>
 
             </div>
