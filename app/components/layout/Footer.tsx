@@ -19,8 +19,8 @@ type Props = {
 export function Footer({ user }: Props) {
     const { contacts } = user
 
-    const contactInfo = contacts.filter(c => c.type === 'email' || c.type === 'phone')
-    const socialInfo = contacts.filter(c => c.type === 'github' || c.type === 'linkedin')
+    const contactInfo = contacts.filter(c => c.category === 'direct')
+    const socialInfo = contacts.filter(c => c.category === 'social')
 
     return (
         <footer className="w-full border-t border-neutral-200/60 dark:border-neutral-800/60 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md">
@@ -52,12 +52,9 @@ export function Footer({ user }: Props) {
                         {contactInfo.map(contact => {
                             const Icon = iconMap[contact.type as keyof typeof iconMap]
 
-                            const href =
-                                contact.type === 'email'
-                                    ? `mailto:${contact.value}`
-                                    : contact.type === 'phone'
-                                        ? `tel:${contact.value.replace(/\s+/g, '')}`
-                                        : undefined
+                            const href = contact.type === 'email' ? `mailto:${contact.value}`
+                                : contact.type === 'phone' ? `tel:${contact.value.replace(/\s+/g, '')}`
+                                    : undefined
 
                             return (
                                 <li key={contact.id} className="flex items-start gap-3">
