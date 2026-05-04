@@ -3,6 +3,7 @@ export interface Contact {
     userId: number
     title: string
     type: string
+    category: string
     value: string
     linkUrl?: string
     isPrimary: boolean
