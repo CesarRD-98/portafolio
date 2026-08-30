@@ -19,7 +19,7 @@ export const Section = ({
     return (
         <section
             id={id}
-            className={`w-full flex items-center justify-center py-24 md:py-32 ${className}`}
+            className={`w-full flex items-center justify-center scroll-mt-20 py-24 md:py-32 ${className}`}
         >
             <Container>
 

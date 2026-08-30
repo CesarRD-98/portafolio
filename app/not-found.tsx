@@ -29,18 +29,18 @@ export default function NotFound() {
                 {/* Descripción */}
                 <p className="text-gray-500 dark:text-gray-400 mb-6">
                     Parece que esta ruta no existe o fue movida.
-                    Puedes regresar o ir al inicio del panel.
+                    Puedes regresar a la página anterior o volver al inicio.
                 </p>
 
                 {/* Botones */}
                 <div className="flex justify-center gap-3">
 
                     <Link
-                        href="#home"
+                        href="/"
                         className="flex items-center gap-2 px-4 py-2 rounded-md bg-blue-600/75 text-white hover:bg-blue-700  transition-all duration-200 shadow-sm hover:shadow-md"
                     >
                         <Home size={18} />
-                        Inicio
+                        Ir al inicio
                     </Link>
 
                     <button
