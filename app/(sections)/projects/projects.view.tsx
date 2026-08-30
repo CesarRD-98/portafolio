@@ -1,12 +1,12 @@
 import { Section } from "@/app/components/layout/Section"
 import { Project } from "@/app/modules/user_public/user.model"
-import { ProjectCard } from "./components/ProjectCard"
+import { ProjectList } from "./components/ProjectList"
 
 type Props = {
-    user: Project[]
+    projects: Project[]
 }
 
-export function ProjectsView({ user }: Props) {
+export function ProjectsView({ projects }: Props) {
     return (
         <Section
             id="projects"
@@ -15,7 +15,7 @@ export function ProjectsView({ user }: Props) {
 
             {/* GRID */}
             <div className="flex flex-col gap-10">
-                <ProjectCard projects={user} />
+                <ProjectList projects={projects} />
             </div>
 
         </Section>

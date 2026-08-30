@@ -6,22 +6,17 @@ import { Project } from '@/app/modules/user_public/user.model'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import { FaArrowUp } from 'react-icons/fa6'
+import { ArrowUpRight } from 'lucide-react'
+import { FaGithub } from 'react-icons/fa6'
 
 type Props = {
     projects: Project[]
 }
 
-export function ProjectCard({ projects }: Props) {
+export function ProjectList({ projects }: Props) {
 
     const [showMore, setShowMore] = useState<boolean>(false)
     const projectsToShow = showMore ? projects : projects.slice(0, 2)
-
-    const handleShowMore = () => {
-        setTimeout(() => {
-            setShowMore(prev => !prev)
-        }, 300)
-    }
 
     return (
         <>
@@ -41,9 +36,8 @@ export function ProjectCard({ projects }: Props) {
                                 src={project.imgUrl}
                                 alt={project.title}
                                 fill
-                                sizes='140px'
+                                sizes="(max-width: 768px) 100vw, 450px"
                                 className="object-cover"
-                                priority
                             />
                         </div>
 
@@ -78,16 +72,29 @@ export function ProjectCard({ projects }: Props) {
                             </p>
 
                             {/* CTA */}
-                            {project.link && (
-                                <div className="mt-2">
-                                    <Link
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:underline">
-                                        Ver proyecto
-                                        <FaArrowUp className="rotate-45" />
-                                    </Link>
+                            {(project.repo || project.demo) && (
+                                <div className="mt-2 flex flex-wrap gap-4">
+                                    {project.repo && (
+                                        <Link
+                                            href={project.repo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:underline">
+                                            <FaGithub size={14} />
+                                            Repositorio
+                                        </Link>
+                                    )}
+
+                                    {project.demo && (
+                                        <Link
+                                            href={project.demo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:underline">
+                                            Demo
+                                            <ArrowUpRight size={14} />
+                                        </Link>
+                                    )}
                                 </div>
                             )}
 
@@ -100,7 +107,7 @@ export function ProjectCard({ projects }: Props) {
             {projects.length > 2 && (
                 <div className="flex justify-center mt-4">
                     <Button
-                        onClick={handleShowMore}
+                        onClick={() => setShowMore(prev => !prev)}
                         action={showMore ? 'Mostrar menos' : 'Mostrar todos'}
                     />
                 </div>
