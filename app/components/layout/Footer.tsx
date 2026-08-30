@@ -1,13 +1,14 @@
 'use client'
 
 import Link from 'next/link'
-import { SiGithub, SiMailboxdotorg } from 'react-icons/si'
-import { FaLinkedin, FaPhone } from 'react-icons/fa6'
+import { SiGithub } from 'react-icons/si'
+import { FaLinkedin } from 'react-icons/fa6'
+import { Mail, Phone } from 'lucide-react'
 import { User } from '@/app/modules/user_public/user.model'
 
 const iconMap = {
-    email: SiMailboxdotorg,
-    phone: FaPhone,
+    email: Mail,
+    phone: Phone,
     github: SiGithub,
     linkedin: FaLinkedin
 }
@@ -102,6 +103,7 @@ export function Footer({ user }: Props) {
                                         <Link
                                             href={contact.linkUrl || '#'}
                                             target="_blank"
+                                            rel="noopener noreferrer"
                                             className="text-neutral-500 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
                                         >
                                             {contact.value}
@@ -118,7 +120,7 @@ export function Footer({ user }: Props) {
             {/* BOTTOM */}
             <div className="border-t border-neutral-200 dark:border-neutral-800 py-5 flex justify-center">
                 <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                    &copy; {user.author} {user.year} {" "} &bull; Desarrollador &bull; Portafolio
+                    &copy; {user.author} {user.year} {" "} &bull; {user.profession} {" "} &bull; Portafolio
                 </p>
             </div>
 

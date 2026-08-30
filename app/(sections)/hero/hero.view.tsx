@@ -1,4 +1,4 @@
-import { FaArrowUp, FaUser, } from "react-icons/fa6"
+import { ArrowUp, User as UserIcon } from "lucide-react"
 import { Section } from "@/app/components/layout/Section"
 import { User } from "@/app/modules/user_public/user.model"
 import Image from 'next/image'
@@ -10,7 +10,7 @@ type Props = {
 
 export function HeroView({ user }: Props) {
     return (
-        <Section id="home" className="scroll-mt-20">
+        <Section id="home">
             <div className="grid gap-12 md:grid-cols-2 items-center">
 
                 {/* LEFT */}
@@ -28,7 +28,7 @@ export function HeroView({ user }: Props) {
 
                     {/* SUBTITLE */}
                     <h2 className="text-xl md:text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-200">
-                        Desarrollador Fullstack
+                        {user.profession || 'Desarrollador Fullstack'}
                     </h2>
 
                     {/* DESCRIPTION */}
@@ -46,7 +46,7 @@ export function HeroView({ user }: Props) {
                             transition"
                         >
                             Ver proyectos
-                            <FaArrowUp className="rotate-45" />
+                            <ArrowUp className="rotate-45" />
                         </Link>
 
                         {/* SECONDARY */}
@@ -58,7 +58,7 @@ export function HeroView({ user }: Props) {
                             transition"
                         >
                             Sobre mí
-                            <FaUser />
+                            <UserIcon />
                         </Link>
 
                     </div>
