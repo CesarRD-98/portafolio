@@ -119,7 +119,7 @@ export function Footer({ user }: Props) {
 
             {/* BOTTOM */}
             <div className="border-t border-neutral-200 dark:border-neutral-800 py-5 flex justify-center">
-                <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                <p className="text-sm text-center text-neutral-500 dark:text-neutral-400">
                     &copy; {user.author} {user.year} {" "} &bull; {user.profession} {" "} &bull; Portafolio
                 </p>
             </div>
