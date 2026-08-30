@@ -17,7 +17,8 @@ export interface Project {
     imgUrl: string
     stack: string[]
     role: string
-    link: string
+    repo?: string
+    demo?: string
 }
 
 export interface Skill {
