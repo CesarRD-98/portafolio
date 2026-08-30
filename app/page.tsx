@@ -24,9 +24,9 @@ export default async function Page() {
             <main className="min-h-screen flex items-center justify-center bg-neutral-100 dark:bg-neutral-900/50">
                 <Header />
                 <div className="text-center px-6">
-                    <p className="text-lg font-medium text-neutral-900 dark:text-white">
-                        El contenido no está disponible en este momento.
-                    </p>
+                    <h1 className="text-2xl font-semibold text-neutral-900 dark:text-white">
+                        Contenido no disponible
+                    </h1>
                     <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
                         Intenta de nuevo más tarde.
                     </p>
