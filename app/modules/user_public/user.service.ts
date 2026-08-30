@@ -1,5 +1,5 @@
+import camelcaseKeys from 'camelcase-keys'
 import { getSupabase } from "@/app/lib/supabase/client"
-import { toCamelCase } from "@/app/utils/caseConvert"
 import { Contact, Project, Skill, User } from "./user.model"
 
 export async function getUserPublic(): Promise<User | null> {
@@ -16,10 +16,30 @@ export async function getUserPublic(): Promise<User | null> {
         throw new Error(user.error.message)
     }
 
-    const userCamel = toCamelCase(user.data) as Omit<User, 'contacts' | 'projects' | 'skills'>
-    const projectsCamel = toCamelCase(projects.data) as Project[]
-    const skillsCamel = toCamelCase(skills.data) as Skill[]
-    const contactsCamel = toCamelCase(contacts.data) as Contact[]
+    if (projects.error) {
+        console.error('Error al cargar proyectos:', projects.error.message)
+    }
+
+    if (skills.error) {
+        console.error('Error al cargar skills:', skills.error.message)
+    }
+
+    if (contacts.error) {
+        console.error('Error al cargar contactos:', contacts.error.message)
+    }
+
+    const userCamel = (user.data
+        ? camelcaseKeys(user.data, { deep: true })
+        : {}) as Omit<User, 'contacts' | 'projects' | 'skills'>
+    const projectsCamel = projects.error
+        ? []
+        : (camelcaseKeys(projects.data, { deep: true }) as Project[])
+    const skillsCamel = skills.error
+        ? []
+        : (camelcaseKeys(skills.data, { deep: true }) as Skill[])
+    const contactsCamel = contacts.error
+        ? []
+        : (camelcaseKeys(contacts.data, { deep: true }) as Contact[])
 
     return {
         ...userCamel,

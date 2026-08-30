@@ -1,5 +1,3 @@
-'use client'
-
 import { Section } from "@/app/components/layout/Section"
 import { ContactForm } from "./components/ContactForm"
 
