@@ -38,6 +38,7 @@ export function SkillCard({ skills }: Props) {
                             key={value}
                             type="button"
                             onClick={() => setFilter(value)}
+                            aria-pressed={isActive}
                             className={`px-4 py-2 text-sm font-medium rounded-full border transition-all duration-200 ease-out cursor-pointer
                                 ${isActive
                                     ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/30'
