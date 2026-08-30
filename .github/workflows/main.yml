@@ -5,24 +5,28 @@ on:
     branches: [master, dev]
   pull_request:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   quality:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - name: Setup pnpm + Node.js
+        uses: pnpm/setup@v2
         with:
-          version: 10
-          
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: 'pnpm'
+          version: 11
+          runtime: node@24
+          cache: true
+          install: false
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -46,24 +50,21 @@ jobs:
 
     steps:
       - name: Checkout código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - name: Setup pnpm + Node.js
+        uses: pnpm/setup@v2
         with:
-          version: 10
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: 'pnpm'
+          version: 11
+          runtime: node@24
+          cache: true
+          install: false
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Cache compilación Next.js
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('app/**', 'next.config.*', 'package.json') }}
