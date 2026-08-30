@@ -33,6 +33,9 @@ jobs:
       - name: Run ESLint
         run: pnpm lint
 
+      - name: Run tests
+        run: pnpm test
+
   build:
     runs-on: ubuntu-latest
     needs: quality
@@ -58,6 +61,14 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Cache compilación Next.js
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('app/**', 'next.config.*', 'package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
       - name: Build Next.js
         run: pnpm build
