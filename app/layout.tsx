@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "César Reyes — Desarrollador Fullstack",
+    default: "César Reyes - Desarrollador Fullstack",
     template: "%s | César Reyes",
   },
   description: SITE_DESCRIPTION,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     locale: "es_ES",
-    title: "César Reyes — Desarrollador Fullstack",
+    title: "César Reyes - Desarrollador Fullstack",
     description: SITE_DESCRIPTION,
   },
   robots: {

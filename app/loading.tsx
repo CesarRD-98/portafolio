@@ -7,7 +7,7 @@ export default function Loading() {
             <div className="relative w-16 h-16">
                 <Image
                     src="https://rekydsbimkpqukrlqkbi.supabase.co/storage/v1/object/public/assets/logos/logo-nav.png"
-                    alt="César Reyes — cargando"
+                    alt="César Reyes - cargando"
                     fill
                     sizes="64px"
                     className="object-contain"

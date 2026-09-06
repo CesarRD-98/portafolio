@@ -15,7 +15,7 @@ El sitio es responsive, funciona en modo claro y oscuro, y el contenido no está
 
 El panel está alojado en un repositorio aparte:
 
-> 🔗 **[Panel Administrativo — AGREGAR URL]** _(pendiente: completar la URL del repositorio del panel)_
+> 🔗 **[Panel Administrativo]** _(https://github.com/CesarRD-s/dashboard-portafolio)_
 
 ## ¿Para quién?
 
