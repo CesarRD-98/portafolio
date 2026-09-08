@@ -6,9 +6,10 @@ type Props = {
     href: string
     children: ReactNode
     className?: string
+    onNavigate?: (id: string) => void
 }
 
-export function HashLink({ href, children, className }: Props) {
+export function HashLink({ href, children, className, onNavigate }: Props) {
     const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
         const id = href.replace('#', '')
         const el = document.getElementById(id)
@@ -22,6 +23,7 @@ export function HashLink({ href, children, className }: Props) {
         })
 
         window.history.replaceState(null, '', href)
+        onNavigate?.(id)
     }
 
     return (
