@@ -1,3 +1,4 @@
+import 'server-only'
 import camelcaseKeys from 'camelcase-keys'
 import { getSupabase } from "@/app/lib/supabase/client"
 import { Contact, Project, Skill, User } from "./user.model"
