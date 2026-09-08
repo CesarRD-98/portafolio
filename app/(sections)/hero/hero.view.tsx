@@ -1,8 +1,8 @@
 import { ArrowUp, User as UserIcon } from "lucide-react"
 import { Section } from "@/app/components/layout/Section"
+import { HashLink } from "@/app/components/layout/HashLink"
 import { User } from "@/app/modules/user_public/user.model"
 import Image from 'next/image'
-import Link from 'next/link'
 
 type Props = {
     user: User
@@ -40,17 +40,17 @@ export function HeroView({ user }: Props) {
                     <div className="flex flex-wrap gap-4 pt-2">
 
                         {/* PRIMARY */}
-                        <Link
+                        <HashLink
                             href="#projects"
                             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white font-medium bg-blue-600 hover:bg-blue-600/75 
                             transition"
                         >
                             Ver proyectos
                             <ArrowUp className="rotate-45" />
-                        </Link>
+                        </HashLink>
 
                         {/* SECONDARY */}
-                        <Link
+                        <HashLink
                             href="#about-me"
                             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium 
                             text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white 
@@ -59,7 +59,7 @@ export function HeroView({ user }: Props) {
                         >
                             Sobre mí
                             <UserIcon />
-                        </Link>
+                        </HashLink>
 
                     </div>
                 </div>
