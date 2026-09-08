@@ -1,5 +1,6 @@
 import { isEmail } from "@/app/utils/isEmail";
 import { NextRequest, NextResponse } from "next/server";
+import { isIP } from "node:net";
 
 const WINDOW_MS = 60_000
 const MAX_REQUESTS_PER_WINDOW = 10
@@ -89,13 +90,25 @@ const resp = (success: boolean, message: string, statusCode: number) => {
 }
 
 const getClientIp = (req: NextRequest): string => {
-    const forwarded = req.headers.get('x-forwarded-for')
-    if (forwarded) return forwarded.split(',')[0].trim()
+    const rawIp = req.headers.get('x-forwarded-for')?.split(',')[0]
+        ?? req.headers.get('x-real-ip')
 
-    const realIp = req.headers.get('x-real-ip')
-    if (realIp) return realIp.trim()
+    return rawIp ? normalizeIp(rawIp) : 'unknown'
+}
 
-    return 'unknown'
+const normalizeIp = (value: string): string => {
+    let ip = value.trim()
+
+    if (ip.startsWith('[') && ip.endsWith(']')) {
+        ip = ip.slice(1, -1)
+    }
+
+    const mappedIpv4 = ip.match(/^::ffff:(\d+\.\d+\.\d+\.\d+)$/i)
+    if (mappedIpv4) {
+        ip = mappedIpv4[1]
+    }
+
+    return isIP(ip) ? ip : 'unknown'
 }
 
 const isRateLimited = (key: string): boolean => {
