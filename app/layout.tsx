@@ -51,7 +51,7 @@ export const viewport: Viewport = {
 
 const firaSans = Fira_Sans({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
   variable: "--font-fira-sans",
 });

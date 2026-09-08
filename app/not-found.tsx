@@ -9,7 +9,7 @@ export default function NotFound() {
     return (
         <div className="flex min-h-screen items-center justify-center px-6 bg-neutral-50 dark:bg-neutral-950 transition-colors">
 
-            <div className="text-center max-w-md animate-in fade-in zoom-in duration-300 ease-in-out">
+            <div className="text-center max-w-md">
 
                 {/* Icono */}
                 <div className="flex justify-center mb-6">
