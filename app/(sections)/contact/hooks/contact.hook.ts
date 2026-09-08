@@ -1,5 +1,7 @@
+'use client'
+
 import { useState } from "react";
-import { ContactDto } from "../user.model";
+import { ContactDto } from "../contact.types";
 
 type Status = 'idle' | 'sending' | 'slow' | 'success' | 'error'
 

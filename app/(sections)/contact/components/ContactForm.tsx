@@ -3,22 +3,16 @@
 import { Alert } from '@/app/components/ui/Alert'
 import { Button } from '@/app/components/ui/Button'
 import { Spinner } from '@/app/components/ui/spinner/Spinner'
-import { useContact } from '@/app/modules/user_public/hooks/userPublic.hook'
+import { useContact } from '../hooks/contact.hook'
+import { ContactDto } from '../contact.types'
 import { isEmail } from '@/app/utils/isEmail'
 import { X } from 'lucide-react'
-import { useState, FormEvent } from 'react'
-
-type FormState = {
-    name: string
-    email: string
-    message: string
-    company?: string
-}
+import { useState, type SubmitEvent } from 'react'
 
 export function ContactForm() {
     const { error, status, setStatus, send } = useContact();
 
-    const [form, setForm] = useState<FormState>({
+    const [form, setForm] = useState<ContactDto>({
         name: '',
         email: '',
         message: '',
@@ -40,7 +34,7 @@ export function ContactForm() {
         }
     }
 
-    const handleSubmit = async (e: FormEvent) => {
+    const handleSubmit = async (e: SubmitEvent) => {
         e.preventDefault()
 
         if (!isEmail(form.email.trim())) {
@@ -137,7 +131,7 @@ export function ContactForm() {
                 action={(status === 'sending' || status === 'slow') ? <Spinner /> : 'Enviar mensaje'}
             />
 
-{/* FEEDBACK */}
+            {/* FEEDBACK */}
             <div className="relative" aria-live="polite">
 
                 {status === 'sending' && (<Alert type="info" message="Enviando mensaje..." />)}
