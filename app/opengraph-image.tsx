@@ -3,7 +3,7 @@ import { SITE_URL } from './config/site'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
-export const alt = 'César Reyes — Desarrollador Fullstack'
+export const alt = 'César Reyes - Desarrollador Fullstack'
 
 export default function OgImage() {
     return new ImageResponse(
